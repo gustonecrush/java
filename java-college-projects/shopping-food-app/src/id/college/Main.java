@@ -63,6 +63,19 @@ public class Main {
          * */
 
         for(Integer i = 0; i < Menu.length; i++) {
+            if(number <= Menu[0].length) {
+                System.out.println("  --------------------------------");
+                System.out.println(" | Food →                         |");
+                System.out.println("  --------------------------------");
+            } else if(number > Menu[0].length && number <= Menu[0].length*2) {
+                System.out.println("  --------------------------------");
+                System.out.println(" | Frozen Food →                  |");
+                System.out.println("  --------------------------------");
+            } else if(number > Menu[0].length*2 && number <= Menu[0].length*3) {
+                System.out.println("  --------------------------------");
+                System.out.println(" | Fresh Food →                   |");
+                System.out.println("  --------------------------------");
+            }
             for(Integer j = 0; j < Menu[0].length; j++) {
                 System.out.println(" | " + number + " | " + Menu[i][j][0] + " | Rp. " + Menu[i][j][1] );
                 number++;
